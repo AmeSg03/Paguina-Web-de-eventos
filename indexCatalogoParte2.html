@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Servicios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 5px 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #2c3e50;
+        }
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .servicio {
+            flex: 1 1 300px;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .servicio img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .servicio-info {
+            padding: 15px;
+        }
+        .servicio h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .servicio p {
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 768px) {
+            .servicios {
+                flex-direction: column;
+                align-items: center;
+            }
+            .servicio {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Servicios</h1>
+        <nav>
+            <ul>
+                <li><a href="#letras3d">Letras 3D</a></li>
+                <li><a href="#centrosmesa">Centros de Mesa</a></li>
+                <li><a href="#arregloscarpa">Arreglos de Carpa</a></li>
+                <li><a href="#arreglostematicos">Arreglos Temáticos</a></li>
+                <li><a href="#mesadulces">Mesa de Dulces</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="servicios">
+            <article id="letras3d" class="servicio">
+                <img src="/placeholder.svg?height=200&width=300" alt="Letras 3D decorativas">
+                <div class="servicio-info">
+                    <h2>Letras 3D</h2>
+                    <p>Letras personalizadas para cualquier ocasión</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </article>
+            <article id="centrosmesa" class="servicio">
+                <img src="/placeholder.svg?height=200&width=300" alt="Centro de mesa elegante">
+                <div class="servicio-info">
+                    <h2>Centros de Mesa</h2>
+                    <p>Elegantes centros de mesa para eventos</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </article>
+            <article id="arregloscarpa" class="servicio">
+                <img src="/placeholder.svg?height=200&width=300" alt="Arco decorativo para carpa">
+                <div class="servicio-info">
+                    <h2>Arreglos de Carpa</h2>
+                    <p>Arcos y decoraciones de piso para carpas</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </article>
+            <article id="arreglostematicos" class="servicio">
+                <img src="/placeholder.svg?height=200&width=300" alt="Regalo temático con dulces">
+                <div class="servicio-info">
+                    <h2>Arreglos Temáticos</h2>
+                    <p>Regalos con dulces personalizados</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </article>
+            <article id="mesadulces" class="servicio">
+                <img src="/placeholder.svg?height=200&width=300" alt="Mesa de dulces variados">
+                <div class="servicio-info">
+                    <h2>Mesa de Dulces</h2>
+                    <p>Mesas de dulces para todo tipo de eventos</p>
+                    <a href="#" class="btn">Ver más</a>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
