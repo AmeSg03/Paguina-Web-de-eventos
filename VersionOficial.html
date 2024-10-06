@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Empresa de Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 10px 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            white-space: nowrap;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .presentacion, .cotizacion, .catalogo, .galeria, .contacto {
+            padding: 40px 0;
+        }
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .servicio {
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .servicio img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .servicio-info {
+            padding: 15px;
+        }
+        .btn-ver-mas {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn-ver-mas:hover {
+            background-color: #2980b9;
+        }
+        .galeria-imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .galeria-imagenes img {
+            width: calc(25% - 10px);
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .cotizacion form, .contacto form {
+            display: grid;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav {
+                margin-top: 10px;
+            }
+            nav ul {
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .servicio {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .galeria-imagenes img {
+                width: calc(50% - 5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="/placeholder.svg?height=50&width=150" alt="Logo de la Empresa">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#cotizacion">Cotización</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="presentacion">
+            <div class="container">
+                <h1>Bienvenidos a Nuestra Empresa de Eventos</h1>
+                <p>Somos especialistas en crear momentos inolvidables. Con años de experiencia en la industria de eventos, ofrecemos soluciones creativas y personalizadas para hacer de su ocasión especial un éxito rotundo. Desde decoraciones elegantes hasta detalles temáticos únicos, estamos aquí para hacer realidad sus sueños.</p>
+            </div>
+        </section>
+
+        <section id="cotizacion" class="cotizacion">
+            <div class="container">
+                <h2>Solicita una Cotización</h2>
+                <form>
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <input type="tel" name="telefono" placeholder="Teléfono">
+                    <select name="tipo_evento" required>
+                        <option value="">Selecciona el tipo de evento</option>
+                        <option value="boda">Boda</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="corporativo">Evento corporativo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <input type="date" name="fecha_evento" placeholder="Fecha del evento" required>
+                    <input type="number" name="num_invitados" placeholder="Número de invitados" required>
+                    <textarea name="detalles" placeholder="Detalles adicionales del evento" rows="4"></textarea>
+                    <button type="submit">Solicitar Cotización</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalogo">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="servicios">
+                    <article id="letras3d" class="servicio">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Letras 3D decorativas">
+                        <div class="servicio-info">
+                            <h3>Letras 3D</h3>
+                            <p>Letras personalizadas para cualquier ocasión</p>
+                            <a href="letras3d.html" class="btn-ver-mas" target="_blank">Ver más</a>
+                        </div>
+                    </article>
+                    <article id="centrosmesa" class="servicio">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Centro de mesa elegante">
+                        <div class="servicio-info">
+                            <h3>Centros de Mesa</h3>
+                            <p>Elegantes centros de mesa para eventos</p>
+                            <a href="centrosmesa.html" class="btn-ver-mas" target="_blank">Ver más</a>
+                        </div>
+                    </article>
+                    <article id="arregloscarpa" class="servicio">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Arco decorativo para carpa">
+                        <div class="servicio-info">
+                            <h3>Arreglos de Carpa</h3>
+                            <p>Arcos y decoraciones de piso para carpas</p>
+                            <a href="arregloscarpa.html" class="btn-ver-mas" target="_blank">Ver más</a>
+                        </div>
+                    </article>
+                    <article id="arreglostematicos" class="servicio">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Regalo temático con dulces">
+                        <div class="servicio-info">
+                            <h3>Arreglos Temáticos</h3>
+                            <p>Regalos con dulces personalizados</p>
+                            <a href="arreglostematicos.html" class="btn-ver-mas" target="_blank">Ver más</a>
+                        </div>
+                    </article>
+                    <article id="mesadulces" class="servicio">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Mesa de dulces variados">
+                        <div class="servicio-info">
+                            <h3>Mesa de Dulces</h3>
+                            <p>Mesas de dulces para todo tipo de eventos</p>
+                            <a href="mesadulces.html" class="btn-ver-mas" target="_blank">Ver más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="galeria">
+            <div class="container">
+                <h2>Galería de Nuestros Trabajos</h2>
+                <div class="galeria-imagenes">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 1">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 2">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 3">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 4">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 5">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 6">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 7">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Imagen de evento 8">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <form>
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="tel" name="telefono" placeholder="Teléfono">
+                    <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nuestra Empresa de Eventos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
